@@ -4,19 +4,17 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.page.html',
-  styleUrls: ['./register.page.scss'],
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
-export class RegisterPage implements OnInit{
-  email: string="";
-  password: string="";
+export class LoginPage implements OnInit{
+  email: string = "";
+  password: string = "";
 
   constructor(private authService: AuthService,
     private router: Router,
-    private afAuth: AngularFireAuth
-  ) {}
-
+    private afAuth: AngularFireAuth) {}
 
   ngOnInit() {
     this.afAuth.authState.subscribe(user => {
@@ -27,13 +25,13 @@ export class RegisterPage implements OnInit{
   }
 
   async onSubmit() {
-    const user = await this.authService.register(this.email, this.password);
+    const user = await this.authService.login(this.email, this.password);
     if (user) {
-      // Registro exitoso, redirigir a la página principal
+      // Inicio de sesión exitoso, redirigir a la página principal
       this.router.navigateByUrl('/home');
     } else {
-      // Manejar el error de registro
-      alert('Registration failed');
+      // Manejar el error de inicio de sesión
+      alert('Login failed');
     }
   }
 }
