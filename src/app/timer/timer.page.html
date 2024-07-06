@@ -1,0 +1,36 @@
+
+<ion-content>
+  <div fxLayout="column" fxLayoutAlign="center center" class="full-screen">
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      class="timer-container"
+    >
+      <circle-progress
+        [percent]="percent"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [outerStrokeColor]="'#CDB4DB'"
+        [innerStrokeWidth]="8"
+        [innerStrokeColor]="'#FFAFCC'"
+        [animation]="true"
+        [animationDuration]="300"
+        [showSubtitle]="true"
+        [subtitle]="''"
+        [title]="'Time'"
+        [showTitle]="true"
+        [titleColor]="'#FFAFCC'"
+        [unitsColor]="'#CDB4DB'"
+        [backgroundPadding]="7"
+        [backgroundColor]="'#e0f7fa'"
+        [clockwise]="true"
+      ></circle-progress>
+      <div class="clock">{{ minutes }}:{{ seconds | number: '2.0' }}</div>
+      <div class="buttons">
+        <ion-button (click)="startTimer()" class="success">Start</ion-button>
+        <ion-button (click)="pauseTimer()" class="warning">Pause</ion-button>
+        <ion-button (click)="resetTimer()" class="danger">Reset</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

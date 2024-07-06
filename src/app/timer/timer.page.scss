@@ -1,0 +1,51 @@
+
+.full-screen {
+  height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+  display: flex;
+}
+
+.timer-container {
+  background-color: #ffeef3;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.clock {
+  font-size: 2.5em;
+  margin-top: 20px;
+  color: #FFAFCC;
+  font-family: 'Arial', sans-serif;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+ion-content{
+  --background: #BDE0FE;
+}
+
+ion-button {
+  --border-radius: 12px;
+  --background: #e0f7fa;
+  --color: #8d6e63;
+  --padding: 10px 20px;
+}
+
+ion-button[color="success"] {
+  --background: #A2D2FF;
+}
+
+ion-button[color="warning"] {
+  --background: #ffcc80;
+}
+
+ion-button[color="danger"] {
+  --background: #ef9a9a;
+}

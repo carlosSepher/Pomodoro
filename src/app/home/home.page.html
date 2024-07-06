@@ -1,20 +1,13 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.md="column" fxLayout.lg="row" fxLayoutAlign="start stretch" fxLayoutAlign.lg="start start" fxLayoutGap="10px">
+    <div fxFlex="100%" fxFlex.lg="25%" class="box">Box 1</div>
+    <div fxFlex="100%" fxFlex.lg="25%" class="box">Box 2</div>
+    <div fxFlex="100%" fxFlex.lg="25%" class="box">Box 3</div>
   </div>
 </ion-content>
